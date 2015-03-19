@@ -1,9 +1,7 @@
 FROM stadlerb/halvm-fedora-base
+MAINTAINER Bernhard Stadler <stadlerb@users.noreply.github.com>
 
 # Clone 'master' of HaLVM and build it.
-
-MAINTAINER Bernhard Stadler <Bernhard-Stadler@gmx.net>
-
 USER root
 
 WORKDIR /build

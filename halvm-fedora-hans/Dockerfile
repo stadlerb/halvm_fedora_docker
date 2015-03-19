@@ -1,9 +1,7 @@
 FROM stadlerb/halvm-fedora-runtime
+MAINTAINER Bernhard Stadler <stadlerb@users.noreply.github.com>
 
 # Compile install the HaNS from github.
-
-MAINTAINER Bernhard Stadler <Bernhard-Stadler@gmx.net>
-
 USER root
 
 # Install HaNS

@@ -1,5 +1,5 @@
 FROM fedora:21
-MAINTAINER Bernhard Stadler <Bernhard-Stadler@gmx.net>
+MAINTAINER Bernhard Stadler <stadlerb@users.noreply.github.com>
 USER root
 
 # Reinstall glibc because setting the UTF-8 locale won't work in the Fedora 21 image without this
