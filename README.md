@@ -6,6 +6,7 @@ based on Fedora.
 
 It is split into three sub-images (and corresponding directories),
 which build upon each other:
+
 1. halvm-fedora-base: A base system with all dependencies but without HalVM
 2. halvm-fedora-runtime: HalVM runtime
 3. halvm-fedora-hans: HaNS installation
