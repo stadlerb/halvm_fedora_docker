@@ -1,4 +1,4 @@
-FROM halvm/fedora-base
+FROM stadlerb/halvm-fedora-base
 
 # Clone 'master' of HaLVM and build it.
 

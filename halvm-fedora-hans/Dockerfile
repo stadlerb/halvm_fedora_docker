@@ -1,4 +1,4 @@
-FROM halvm/fedora-runtime
+FROM stadlerb/halvm-fedora-runtime
 
 # Compile install the HaNS from github.
 
