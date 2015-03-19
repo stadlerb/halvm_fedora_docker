@@ -14,8 +14,7 @@ RUN git clone https://github.com/GaloisInc/HaLVM.git\
     && make install\
     && cd /build\
     && rm -rf /build/HaLVM\
-    && cabal update\
-    ; true
+    && cabal update
 
 WORKDIR /build
 CMD /usr/bin/bash
