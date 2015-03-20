@@ -13,8 +13,10 @@ ENV HOME=/build\
 ADD TO_INSTALL /TO_INSTALL
 RUN export LANG=en_US.UTF-8\
      ; export LC_ALL=en_US.UTF-8\
-     ; mkdir /build\
+     ; mkdir -p /build\
      && cat /TO_INSTALL | xargs yum -y install\
+     && cabal update\
+     && cabal install cabal-install\
      && yum clean all
 WORKDIR /build
 CMD /usr/bin/bash

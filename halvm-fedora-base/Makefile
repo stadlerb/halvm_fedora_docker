@@ -7,9 +7,11 @@
 # NOTE: Docker must be installed and the current user must be privileged to
 #       use docker.
 #
-REPO=halvm
+SHELL=/bin/bash
+
+REPO=stadlerb
 CONTAINER=halvm-fedora-base
-IMAGE=$(REPO)/fedora-base
+IMAGE=$(REPO)/halvm-fedora-base
 
 # Create a docker container from a docker image with HaLVM installed:
 .PHONY: container
@@ -23,8 +25,8 @@ run:
 
 # Install all build dependencies and build HaLVM into a docker container:
 .PHONY: image
-image: Dockerfile TO_INSTALL pacman.conf
-	docker build -t $(IMAGE) . 2>&1 | tee build.log
+image: Dockerfile TO_INSTALL
+	set -o pipefail && docker build -t $(IMAGE) . 2>&1 | tee build.log
 
 # Remove the docker container, but not the image:
 .PHONY: clean-container
